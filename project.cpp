@@ -60,6 +60,16 @@ public:
         {
             if (p1.get_pesel() != p2.get_pesel())
                 return (p1.get_pesel() < p2.get_pesel());
+            if (p1.get_name() != p2.get_name())
+                return (p1.get_name() < p2.get_name());
+            if (p1.get_surname() != p2.get_surname())
+                return (p1.get_surname() < p2.get_surname());
+            if (p1.get_address() != p2.get_address())
+                return (p1.get_address() < p2.get_address());
+            if (p1.get_age() != p2.get_age())
+                return (p1.get_age() < p2.get_age());
+            if (p1.get_date_of_birth() != p2.get_date_of_birth())
+                return (p1.get_date_of_birth() < p2.get_date_of_birth());
             return false;
         }
     };
@@ -70,6 +80,16 @@ public:
         {
             if (p1.get_name() != p2.get_name())
                 return (p1.get_name() < p2.get_name());
+            if (p1.get_surname() != p2.get_surname())
+                return (p1.get_surname() < p2.get_surname());
+            if (p1.get_address() != p2.get_address())
+                return (p1.get_address() < p2.get_address());
+            if (p1.get_age() != p2.get_age())
+                return (p1.get_age() < p2.get_age());
+            if (p1.get_date_of_birth() != p2.get_date_of_birth())
+                return (p1.get_date_of_birth() < p2.get_date_of_birth());
+            if (p1.get_pesel() != p2.get_pesel())
+                return (p1.get_pesel() < p2.get_pesel());
             return false;
         }
     };
@@ -80,6 +100,16 @@ public:
         {
             if (p1.get_surname() != p2.get_surname())
                 return (p1.get_surname() < p2.get_surname());
+            if (p1.get_name() != p2.get_name())
+                return (p1.get_name() < p2.get_name());
+            if (p1.get_address() != p2.get_address())
+                return (p1.get_address() < p2.get_address());
+            if (p1.get_age() != p2.get_age())
+                return (p1.get_age() < p2.get_age());
+            if (p1.get_date_of_birth() != p2.get_date_of_birth())
+                return (p1.get_date_of_birth() < p2.get_date_of_birth());
+            if (p1.get_pesel() != p2.get_pesel())
+                return (p1.get_pesel() < p2.get_pesel());
             return false;
         }
     };
@@ -90,6 +120,16 @@ public:
         {
             if (p1.get_address() != p2.get_address())
                 return (p1.get_address() < p2.get_address());
+            if (p1.get_name() != p2.get_name())
+                return (p1.get_name() < p2.get_name());
+            if (p1.get_surname() != p2.get_surname())
+                return (p1.get_surname() < p2.get_surname());
+            if (p1.get_age() != p2.get_age())
+                return (p1.get_age() < p2.get_age());
+            if (p1.get_date_of_birth() != p2.get_date_of_birth())
+                return (p1.get_date_of_birth() < p2.get_date_of_birth());
+            if (p1.get_pesel() != p2.get_pesel())
+                return (p1.get_pesel() < p2.get_pesel());
             return false;
         }
     };
@@ -100,6 +140,16 @@ public:
         {
             if (p1.get_age() != p2.get_age())
                 return (p1.get_age() < p2.get_age());
+            if (p1.get_name() != p2.get_name())
+                return (p1.get_name() < p2.get_name());
+            if (p1.get_surname() != p2.get_surname())
+                return (p1.get_surname() < p2.get_surname());
+            if (p1.get_address() != p2.get_address())
+                return (p1.get_address() < p2.get_address());
+            if (p1.get_date_of_birth() != p2.get_date_of_birth())
+                return (p1.get_date_of_birth() < p2.get_date_of_birth());
+            if (p1.get_pesel() != p2.get_pesel())
+                return (p1.get_pesel() < p2.get_pesel());
             return false;
         }
     };
@@ -110,6 +160,16 @@ public:
         {
             if (p1.get_date_of_birth() != p2.get_date_of_birth())
                 return (p1.get_date_of_birth() < p2.get_date_of_birth());
+            if (p1.get_name() != p2.get_name())
+                return (p1.get_name() < p2.get_name());
+            if (p1.get_surname() != p2.get_surname())
+                return (p1.get_surname() < p2.get_surname());
+            if (p1.get_address() != p2.get_address())
+                return (p1.get_address() < p2.get_address());
+            if (p1.get_age() != p2.get_age())
+                return (p1.get_age() < p2.get_age());
+            if (p1.get_pesel() != p2.get_pesel())
+                return (p1.get_pesel() < p2.get_pesel());
             return false;
         }
     };
@@ -129,12 +189,11 @@ std::array<std::string, 10> nazwiska{ "Nowacki", "Kowalski", "Frankowski", "Biel
 std::array<std::string, 10> miasta{ "Szczecin", "Poznan", "Warszawa", "Kielce", "Gdansk", "Gdynia", "Zakopane", "Wroclaw", "Lodz", "Rzeszow" };
 std::set<Person, Person::Cmp_pesel> osoby;
 
-std::map<long long, std::shared_ptr<Person>> baza;
-std::set<std::shared_ptr<Person>, Person::Cmp_name> sort_name;
-std::set<std::shared_ptr<Person>, Person::Cmp_surname> sort_surname;
-std::set<std::shared_ptr<Person>, Person::Cmp_address> sort_address;
-std::set<std::shared_ptr<Person>, Person::Cmp_age> sort_age;
-std::set<std::shared_ptr<Person>, Person::Cmp_dob> sort_dob; //date of birth
+std::set<Person, Person::Cmp_name> sort_name;
+std::set<Person, Person::Cmp_surname> sort_surname;
+std::set<Person, Person::Cmp_address> sort_address;
+std::set<Person, Person::Cmp_age> sort_age;
+std::set<Person, Person::Cmp_dob> sort_dob; //date of birth
 
 void get_data(const int type, const int start_position, const int amount);
 
@@ -145,7 +204,7 @@ const int aktualny_rok = now->tm_year + 1900;
 const int aktualny_miesiac = now->tm_mon + 1;
 const int aktualny_dzien = now->tm_mday;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     // Obsluga wyjatkow - brak parametrow
     if (argv[1] == NULL) {
@@ -180,7 +239,7 @@ int main(int argc, char *argv[])
         osoby.emplace(x.generuj_osobe());
 
     for (int i = 2; i < argc; i += 3) {
-        get_data(atoi(argv[i]), atoi(argv[i+1]), atoi(argv[i+2]));
+        get_data(atoi(argv[i]), atoi(argv[i + 1]), atoi(argv[i + 2]));
     }
 
     return 0;
@@ -296,31 +355,88 @@ void get_data(const int type, const int start_position, const int amount)
     // start_position = od ktorej pozycji chcemy wypisywac dane
     // amount = ile pozycji wypisac
 
-    /*
-    
-    ----- TUTAJ CHCE ZROBIC SORTOWANIE LISTY OSOB W ZALEZNOSCI OD WYBORU UZYTKOWNIKA -----
-    switch(type) {
-        case 1: sort_name;
-            break;
-        case 2: sort_surname;
-            break;
-        case 3: sort_address;
-            break;
-        case 4: sort_age;
-            break;
-        case 5: sort_dob;
-            break;
-        default: break;
+    int check_amount = 0;
+
+    // W zaleznosci od wybranego typu sortowania kopiujemy osoby naszej bazy do nowej bazy posortowanej wg naszego wyboru i wyswietlamy ja.
+    // W przypadku wyboru sortowania po peselu korzystamy juz z naszej posortowanej bazy bez kolejnego kopiowania.
+    switch (type) {
+    case 0: {
+        auto it0 = osoby.begin();
+        for (it0 = std::next(it0, start_position - 1); it0 != sort_dob.end(); ++it0) {
+            std::cout << *it0;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
     }
 
-    */
+    case 1: {
+        for (auto const& elem : osoby)
+            sort_name.emplace(elem);
+        auto it1 = sort_name.begin();
+        for (it1 = std::next(it1, start_position - 1); it1 != sort_name.end(); ++it1) {
+            std::cout << *it1;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
+    }
 
-    auto it = osoby.begin();
-    int check_amount = 0;
-    for (it = std::next(it, start_position - 1); it != osoby.end(); ++it) {
-        std::cout << *it;
-        ++check_amount;
-        if (check_amount == amount)
-            break;
+    case 2: {
+        for (auto const& elem : osoby)
+            sort_surname.emplace(elem);
+        auto it2 = sort_surname.begin();
+        for (it2 = std::next(it2, start_position - 1); it2 != sort_surname.end(); ++it2) {
+            std::cout << *it2;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
+    }
+
+    case 3: {
+        for (auto const& elem : osoby)
+            sort_address.emplace(elem);
+        auto it3 = sort_address.begin();
+        for (it3 = std::next(it3, start_position - 1); it3 != sort_address.end(); ++it3) {
+            std::cout << *it3;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
+    }
+
+    case 4: {
+        for (auto const& elem : osoby)
+            sort_age.emplace(elem);
+        auto it4 = sort_age.begin();
+        for (it4 = std::next(it4, start_position - 1); it4 != sort_age.end(); ++it4) {
+            std::cout << *it4;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
+    }
+
+    case 5: {
+        for (auto const& elem : osoby)
+            sort_dob.emplace(elem);
+        auto it5 = sort_dob.begin();
+        for (it5 = std::next(it5, start_position - 1); it5 != sort_dob.end(); ++it5) {
+            std::cout << *it5;
+            ++check_amount;
+            if (check_amount == amount)
+                break;
+        }
+        break;
+    }
+
+    default:
+        break;
     }
 }
