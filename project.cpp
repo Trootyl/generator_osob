@@ -240,6 +240,7 @@ int main(int argc, char* argv[])
 
     for (int i = 2; i < argc; i += 3) {
         get_data(atoi(argv[i]), atoi(argv[i + 1]), atoi(argv[i + 2]));
+        std::cout << "==============================================================================" << std::endl;
     }
 
     return 0;
